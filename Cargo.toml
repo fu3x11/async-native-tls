@@ -1,6 +1,6 @@
 [package]
 name = "async-native-tls-2"
-version = "0.5.0"
+version = "0.5.1"
 edition = "2018"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/fu3x11/async-native-tls"
