@@ -9,17 +9,17 @@
 
 <div align="center">
   <!-- Crates version -->
-  <a href="https://crates.io/crates/async-native-tls">
+  <a href="https://crates.io/crates/async-native-tls-2">
     <img src="https://img.shields.io/crates/v/async-native-tls.svg?style=flat-square"
     alt="Crates.io version" />
   </a>
   <!-- Downloads -->
-  <a href="https://crates.io/crates/async-native-tls">
+  <a href="https://crates.io/crates/async-native-tls-2">
     <img src="https://img.shields.io/crates/d/async-native-tls.svg?style=flat-square"
       alt="Download" />
   </a>
   <!-- docs.rs docs -->
-  <a href="https://docs.rs/async-native-tls">
+  <a href="https://docs.rs/async-native-tls-2">
     <img src="https://img.shields.io/badge/docs-latest-blue.svg?style=flat-square"
       alt="docs.rs docs" />
   </a>
@@ -27,11 +27,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://docs.rs/async-native-tls">
+    <a href="https://docs.rs/async-native-tls-2">
       API Docs
     </a>
     <span> | </span>
-    <a href="https://github.com/async-email/async-native-tls/releases">
+    <a href="https://github.com/fu3x11/async-native-tls/releases">
       Releases
     </a>
   </h3>
