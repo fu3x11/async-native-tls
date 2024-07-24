@@ -2,7 +2,6 @@
 
 use std::net::ToSocketAddrs;
 
-use async_native_tls;
 use async_std::net::TcpStream;
 use async_std::prelude::*;
 use env_logger;
@@ -27,7 +26,7 @@ async fn fetch_google() {
 
     // Send off the request by first negotiating an SSL handshake, then writing
     // of our request, then flushing, then finally read off the response.
-    let connector = async_native_tls::TlsConnector::new();
+    let connector = async_native_tls_2::TlsConnector::new();
     let url = url::Url::parse("https://google.com/").unwrap();
     let mut socket = t!(connector.connect(&url, socket).await);
     t!(socket.write_all(b"GET / HTTP/1.0\r\n\r\n").await);

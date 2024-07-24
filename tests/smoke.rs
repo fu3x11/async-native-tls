@@ -9,11 +9,9 @@ use async_std::io;
 use async_std::net::{TcpListener, TcpStream};
 use async_std::prelude::*;
 use cfg_if::cfg_if;
-use env_logger;
 use futures::join;
 use futures::stream::StreamExt;
 use futures::AsyncWrite;
-use native_tls;
 use native_tls::{Identity, TlsAcceptor};
 
 macro_rules! t {
@@ -134,9 +132,9 @@ cfg_if! {
         use std::fs::File;
         use std::env;
         use std::sync::Once;
-        use async_native_tls::TlsConnector;
+        use async_native_tls_2::TlsConnector;
 
-        fn contexts() -> (async_native_tls::TlsAcceptor, async_native_tls::TlsConnector) {
+        fn contexts() -> (async_native_tls_2::TlsAcceptor, async_native_tls_2::TlsConnector) {
             let keys = openssl_keys();
 
             let pkcs12 = t!(Identity::from_pkcs12(&keys.pkcs12_der, "foobar"));
@@ -407,7 +405,7 @@ test suite later.
 const AMT: usize = 128 * 1024;
 
 async fn copy_data<W: AsyncWrite + Unpin>(mut w: W) -> Result<usize, io::Error> {
-    let mut data = vec![9; AMT as usize];
+    let mut data = vec![9; AMT];
     let mut amt = 0;
     while !data.is_empty() {
         let written = w.write(&data).await?;
@@ -531,5 +529,5 @@ async fn one_byte_at_a_time() {
 
     let (amt, data) = join!(server, client);
     assert_eq!(amt, AMT);
-    assert!(data == vec![9; AMT as usize]);
+    assert!(data == vec![9; AMT]);
 }

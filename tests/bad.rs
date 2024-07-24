@@ -3,7 +3,7 @@
 use std::io::{self, Error};
 use std::net::ToSocketAddrs;
 
-use async_native_tls::TlsConnector;
+use async_native_tls_2::TlsConnector;
 use async_std::net::TcpStream;
 use cfg_if::cfg_if;
 use env_logger;
