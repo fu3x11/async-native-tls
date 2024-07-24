@@ -1,12 +1,11 @@
 [package]
-name = "async-native-tls"
+name = "async-native-tls-2"
 version = "0.5.0"
-authors = ["dignifiedquire <me@dignifiedquire.com>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
-repository = "https://github.com/async-email/async-native-tls"
-homepage = "https://docs.rs/crate/async-native-tls/"
-documentation = "https://docs.rs/crate/async-native-tls/"
+repository = "https://github.com/fu3x11/async-native-tls-2"
+homepage = "https://docs.rs/crate/async-native-tls-2/"
+documentation = "https://docs.rs/crate/async-native-tls-2/"
 description = """
 Native TLS using futures
 """
